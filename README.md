@@ -1,2 +1,2 @@
 # rest_api
-Simple Rest API created from scratch
+Simple Rest API created from scratch in Javascript.
