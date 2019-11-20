@@ -5,6 +5,7 @@ const keys = require("./config/keys");
 const getData = require("./routes/api/getData");
 const postData = require("./routes/api/postData");
 const updateData = require("./routes/api/updateData")
+const deleteData = require("./routes/api/deleteData")
 // iniaitize app
 const app = express();
 
@@ -41,6 +42,7 @@ app.get("/", (req, res) => {
 app.use("/api/getData", getData);
 app.use("/api/postData", postData);
 app.use('/api/updateData', updateData)
+app.use('/api/deleteData', deleteData)
 
 // add listening port
 const port = process.env.PORT || 5006;
