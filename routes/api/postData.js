@@ -6,7 +6,7 @@ const fs = require('fs');
 router.post("/", (req, res, next) => {
   try {
     const newQuote = {
-      quote: req.body.author,
+      quote: req.body.quote,
       author: req.body.author,
       category: req.body.category
     };
