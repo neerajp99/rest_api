@@ -2,7 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
-const getData = require('./routes/api/getData')
+const getData = require("./routes/api/getData");
+const postData = require("./routes/api/postData");
 
 // iniaitize app
 const app = express();
@@ -37,7 +38,8 @@ app.get("/", (req, res) => {
 });
 
 // Add routes
-app.use('/api/getData', getData)
+app.use("/api/getData", getData);
+app.use("/api/postData", postData);
 
 // add listening port
 const port = process.env.PORT || 5006;
