@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const keys = require("./config/keys");
 const getData = require("./routes/api/getData");
 const postData = require("./routes/api/postData");
-
+const updateData = require("./routes/api/updateData")
 // iniaitize app
 const app = express();
 
@@ -40,6 +40,7 @@ app.get("/", (req, res) => {
 // Add routes
 app.use("/api/getData", getData);
 app.use("/api/postData", postData);
+app.use('/api/updateData', updateData)
 
 // add listening port
 const port = process.env.PORT || 5006;
